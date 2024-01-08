@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+h1 {
+  text-align: center;
+}
+
+.heading-016 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3a3936;
+}
+
+.heading-016::before,
+.heading-016::after {
+  width: 3px;
+  height: 40px;
+  background-color: #e8ae78;
+  content: '';
+}
+
+.heading-016::before {
+  transform: rotate(-35deg);
+  margin-right: 30px;
+}
+
+.heading-016::after {
+  transform: rotate(35deg);
+  margin-left: 30px;
+}
+
+body { 
+  padding: 20px;
+  background-color: #fbf6f3; 
+} 
+
+
+
+#gallery {
+  padding: 20px;
+  display: grid;
+  max-width: 1000px;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.polaroid {
+  position: relative;/* position: absolute;とセット */
+  width: 300px;/* 画像の幅 */
+  margin: 30px auto;/* 上下の空きと左右の空き */
+  max-width:90%;/* 最大幅 */
+  background-color:#ffffff;/* 背景色 */
+  border: 10px solid #ffffff;/* フチの設定 */
+  border-bottom-width: 80px;/*下のフチ幅*/
+ /* 角度  transform:rotate(-5deg);*/
+  box-shadow: 3px 3px 3px #878686;/* 影の設定 */
+}
+.polaroid img{
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.moji {
+  position: absolute;/* width: 100%;を使うため */
+  width: 100%;/* 文字の横位置の為 */
+  text-align: center;/* 文字中央ぞろえ */
+  bottom: -70px;/* 文字の縦位置 */
+line-height:1.3em;/* 行の高さ */
+  left:0px;/* これが無いと変な位置になる */
+  color: #3a3936;/* 文字色 */
+  font-size:1.5em;/* 文字サイズ */
+  font-family: 'Yomogi', cursive;/* フォント指定 */
+}
+
+.img-item {
+  opacity: 0;
+  filter: blur(10px);
+  width: 100%;
+}
+
+.img-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-item p {
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading span {
+  display: inline-block;
+  color: #fbf6f3;
+  font-weight: 600;
+  font-size: 1.5em;
+  animation: animation-loading-005 1s infinite;
+}
+
+.loading span:nth-of-type(2) {
+  animation-delay: .1s;
+}
+
+.loading span:nth-of-type(3) {
+  animation-delay: .2s;
+}
+
+.loading span:nth-of-type(4) {
+  animation-delay: .3s;
+}
+
+.loading span:nth-of-type(5) {
+  animation-delay: .4s;
+}
+
+.loading span:nth-of-type(6) {
+  animation-delay: .5s;
+}
+
+.loading span:nth-of-type(7) {
+  animation-delay: .6s;
+}
+
+.loading span:nth-of-type(8) {
+  animation-delay: .7s;
+}
+
+.loading span:nth-of-type(9) {
+  animation-delay: .8s;
+}
+
+.loading span:nth-of-type(10) {
+  animation-delay: .9s;
+}
+
+@keyframes animation-loading-005 {
+  50% {
+      transform: translateY(10px);
+  }
+}
+
+.loading {
+  transition: all 5s;
+  background-color: #e8ae78;
+  z-index: 999;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-001 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px 10px 10px;
+  background-color: #e8ae78;
+}
+
+.footer-001__logo {
+  width: 130px;
+  height: 30px;
+}
+
+.footer-001__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1.5em;
+  list-style-type: none;
+  margin: 0 0 .5em;
+  padding: .5em;
+}
+
+.footer-001__link {
+  color: #fff;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+.footer-001__copyright {
+  margin: 0;
+  color: #e6dace;
+  font-weight: 200;
+  font-size: .8em;
+}

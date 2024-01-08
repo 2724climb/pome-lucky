@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+h1 {
+  text-align: center;
+}
+
+.heading-016 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3a3936;
+}
+
+.heading-016::before,
+.heading-016::after {
+  width: 3px;
+  height: 40px;
+  background-color: #e8ae78;
+  content: '';
+}
+
+.heading-016::before {
+  transform: rotate(-35deg);
+  margin-right: 30px;
+}
+
+.heading-016::after {
+  transform: rotate(35deg);
+  margin-left: 30px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading span {
+  display: inline-block;
+  color: #fbf6f3;
+  font-weight: 600;
+  font-size: 1.5em;
+  animation: animation-loading-005 1s infinite;
+}
+
+.loading span:nth-of-type(2) {
+  animation-delay: .1s;
+}
+
+.loading span:nth-of-type(3) {
+  animation-delay: .2s;
+}
+
+.loading span:nth-of-type(4) {
+  animation-delay: .3s;
+}
+
+.loading span:nth-of-type(5) {
+  animation-delay: .4s;
+}
+
+.loading span:nth-of-type(6) {
+  animation-delay: .5s;
+}
+
+.loading span:nth-of-type(7) {
+  animation-delay: .6s;
+}
+
+.loading span:nth-of-type(8) {
+  animation-delay: .7s;
+}
+
+.loading span:nth-of-type(9) {
+  animation-delay: .8s;
+}
+
+.loading span:nth-of-type(10) {
+  animation-delay: .9s;
+}
+
+@keyframes animation-loading-005 {
+  50% {
+      transform: translateY(10px);
+  }
+}
+
+.loading {
+  transition: all 5s;
+  background-color: #e8ae78;
+  z-index: 999;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.wrapper{
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+}
+
+.footer-001{
+    width: 100%;
+    background-color: #e8ae78;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+
+}
+
+.footer-001__logo {
+  width: 130px;
+  height: 30px;
+}
+
+.footer-001__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1.5em;
+  list-style-type: none;
+  margin: 0 0 .5em;
+  padding: .5em;
+}
+
+.footer-001__link {
+  color: #fff;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+.footer-001__copyright {
+  margin: 0;
+  color: #e6dace;
+  font-weight: 200;
+  font-size: .8em;
+}

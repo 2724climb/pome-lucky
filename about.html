@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style src="styleA.css" defer></style>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .wrap {
+        padding: 32px 0 64px;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 16px;
+    }
+
+    .heading-lv1 {
+        font-size: 32px;
+        font-style: italic;
+    }
+
+    .heading-lv2 {
+        font-size: 24px;
+    }
+
+    .heading-lv3 {
+        font-size: 20px;
+    }
+
+    .heading-margin {
+        margin-top: 32px;
+    }
+
+    .text {
+        margin: 16px 0 16px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    a {
+        color: #3F82A8;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body onload="hideLoadingAnimation()">
+  <!-- ローディング画面 -->
+  <div class="loading" id="loading">
+    <p>
+      <span>L</span>
+      <span>o</span>
+      <span>a</span>
+      <span>d</span>
+      <span>i</span>
+      <span>n</span>
+      <span>g</span>
+      <span>.</span>
+      <span>.</span>
+      <span>.</span>
+    </p>
+  </div>
+
+  <header>
+    <li><a href="index.html"style="text-decoration:none;"><h1 class="heading-016">ポメラニアンのラッキー</h1></a></li>
+  </header>
+
+  <main>
+   <body class="wrap">
+        <div class="content">
+
+            <h2 class="heading-lv2 heading-margin text-center">このサイトについて</h2>
+            <p class="text text-center">このサイトでは愛犬の可愛い写真を掲載しています。
+                <br>随時更新予定。
+            </p>
+
+            <h3 class="heading-lv3 heading-margin text-center">プロフィール</h3>
+            <p class="text text-center">
+                はるな
+                <br>
+                <br>九州在住の大学生。
+                <br>Webデザインを勉強中。
+                <br>
+                <br>好きな言葉：「明日休みだよ」「おいしいお菓子あるよ」
+                <br>いやな言葉：「単位」「就活」
+                <br>お気に入りのおもちゃ：ChatGPT
+        </div>
+    </body>
+
+  <script>
+    // サイト読み込み完了後に実行される関数
+    function hideLoadingAnimation() {
+      
+      // Loadingアニメーションを非表示にする
+      const loadingAnimation = document.getElementById('loading');
+      loadingAnimation.classList.add('loaded');
+    }
+
+    // 画面が読み込まれたらanimationを呼び出す
+    window.onload = function () {
+      animation();
+    }
+
+    // 定数の定義
+    const loading = document.getElementById('loading');
+
+    // cssクラスを追加する関数
+    function animation() {
+      loading.classList.add('loaded');
+    }
+
+    const items = document.querySelectorAll('.img-item');
+    // 以下省略
+  </script>
+  
+</body>
+
+<footer class="footer-001">
+    <nav>
+      <ul class="footer-001__list">
+        <li><a href="about.html" style="text-decoration:none;">About</a></li>
+        <li><a href="profile.html" style="text-decoration:none;">Profile</a></li>
+      </ul>
+    </nav>
+    <p class="footer-001__copyright">@ 2023 Haruna M</p>
+</footer>
+  
+</html>

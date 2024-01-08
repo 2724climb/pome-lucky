@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    /* ここにスタイルシートを追加 */
+  </style>
+</head>
+
+<body onload="hideLoadingAnimation()">
+  <!-- ローディング画面 -->
+  <div class="loading" id="loading">
+    <p>
+      <span>L</span>
+      <span>o</span>
+      <span>a</span>
+      <span>d</span>
+      <span>i</span>
+      <span>n</span>
+      <span>g</span>
+      <span>.</span>
+      <span>.</span>
+      <span>.</span>
+    </p>
+  </div>
+
+
+  <header>
+    <li><a href="index.html"style="text-decoration:none;"><h1 class="heading-016">ポメラニアンのラッキー</h1></a></li>
+  </header>
+
+  <main>
+    <div id="gallery" class="gallery">
+     <div class="polaroid">
+      <img src="images/IMG_01.jpg">
+      <p class="moji">ひまわりと一緒に</p>
+      </div>
+      
+     <div class="polaroid">
+      <img src="images/IMG_02.jpg">
+      <p class="moji">サメに立ち向かう</p>
+      </div>
+      
+    <div class="polaroid">
+      <img src="images/IMG_03.jpg">
+      <p class="moji">お下がりのセーター</p>
+      </div>
+            
+
+    <div class="polaroid">
+      <img src="images/IMG_04.jpg">
+      <p class="moji">ブランコに挑戦</p>
+      </div>
+      
+    <div class="polaroid">
+      <img src="images/IMG_05.jpg">
+      <p class="moji">雪遊び</p>
+      </div>
+
+      <div class="polaroid">
+        <img src="images/IMG_06.jpg">
+        <p class="moji">初日の出</p>
+        </div>
+   </div>
+  </main>
+
+  <footer class="footer-001">
+    <nav>
+        <ul class="footer-001__list">
+            <li><a href="about.html"style="text-decoration:none;">About</a></li>
+            <li><a href="profile.html"style="text-decoration:none;">Profile</a></li>
+        </ul>
+    </nav>
+    <p class="footer-001__copyright">@ 2023 Haruna M</p>
+</footer>
+
+  <script>
+    // サイト読み込み完了後に実行される関数
+    function hideLoadingAnimation() {
+      
+      // Loadingアニメーションを非表示にする
+      const loadingAnimation = document.getElementById('loading');
+      loadingAnimation.classList.add('loaded');
+    }
+
+    // 画面が読み込まれたらanimationを呼び出す
+    window.onload = function () {
+      animation();
+    }
+
+    // 定数の定義
+    const loading = document.getElementById('loading');
+
+    // cssクラスを追加する関数
+    function animation() {
+      loading.classList.add('loaded');
+    }
+
+    const items = document.querySelectorAll('.img-item');
+    // 以下省略
+  </script>
+  
+</body>
+</html>
